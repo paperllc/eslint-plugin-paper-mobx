@@ -1,0 +1,63 @@
+{
+  "name": "eslint-plugin-paper-mobx",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "prebuild": "rimraf node_modules/@types/eslint/node_modules/@types/estree",
+    "build": "tsc",
+    "test": "jest",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "files": [
+    "babel.config.js",
+    "package.json",
+    "lib"
+  ],
+  "keywords": [
+    "eslint",
+    "typescript",
+    "mobx"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.18.6",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/eslint-parser": "^7.19.1",
+    "@typescript-eslint/utils": "5.48.0",
+    "@types/eslint": "8.4.6",
+    "@types/estree": "1.0.0",
+    "@types/node": "18.11.17",
+    "eslint": "8.22.0",
+    "husky": "8.0.2",
+    "jest": "28.1.0",
+    "rimraf": "3.0.2",
+    "ts-jest": "28.0.7",
+    "typescript": "4.8.4"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.x.x"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(src/.*\\.test)\\.ts$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "\\.d\\.ts$",
+      "lib/.*"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ]
+  }
+}
