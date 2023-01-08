@@ -1,12 +1,12 @@
 declare const _default: {
     rules: {
-        "no-mobx-async-action": import("eslint").Rule.RuleModule;
+        "no-mobx-async-actions": import("eslint").Rule.RuleModule;
     };
     configs: {
         recommended: {
             plugins: string[];
             rules: {
-                "paper-mobx/no-mobx-async-action": string;
+                "paper-mobx/no-mobx-async-actions": string;
             };
         };
     };
